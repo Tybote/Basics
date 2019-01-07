@@ -8,8 +8,8 @@ Common::Common(){
 	FloatArray = new float[size];
 
 	for(int i = 0; i < size; i++){
-		IntArray[i] = rand() % size + 0;
-		FloatArray[i] = (rand() % size + 0)/10.0;
+		IntArray[i] = rand() % (size*10);
+		FloatArray[i] = (rand() % size*10 + 0)/10.0;
 	}
 }
 
@@ -20,10 +20,12 @@ Common::Common(int s) : size(s) {
 	FloatArray = new float[size];
 
 	for(int i = 0; i < size; i++){
-		IntArray[i] = rand() % size + 0;
-		FloatArray[i] = (rand() % size + 0)/10.0;
+		IntArray[i] = rand() % size*10 + 0;
+		FloatArray[i] = (rand() % size*10 + 0)/10.0;
 	}
 }
+
+Common::~Common(){}
 
 void Common::setSize(int s){
 	size = s;
