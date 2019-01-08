@@ -7,7 +7,7 @@ void display(int *T, int size){
     for(int i = 0; i < size; i++)
         std::cout << T[i] << " ";
 
-    std::cout << std::endl;
+    std::cout << std::endl << std::endl;
 }
 
 void swap(int *T, int first, int second){
@@ -53,18 +53,14 @@ void quickSort(int arr[], int low, int high)
 int main(int argc, char **argv){
     Common common;
     std::cout << "Before sorting : " << std::endl << std::endl;
-    //int T[10] = {3, 6, 1, 8, 4, 5, 9, 2, 7};
+
     int *T = common.IntArray;
     display(common.IntArray, common.getSize());
-    std::cout << std::endl << std::endl;
 
     quickSort(T, 0, common.getSize()-1);
-    //quickSort(T, 0, 9);
 
     std::cout << "After sorting : " << std::endl << std::endl;
     display(T, common.getSize());
-    //display(T, 10);
-    std::cout << std::endl;
 
     return 0;
 }
