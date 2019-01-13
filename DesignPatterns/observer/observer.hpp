@@ -7,8 +7,7 @@
 class IObserver {
 
 public:
-	virtual void Update(std::string content) const = 0;
-	void DisplayContent(std::string content) const;
+	virtual void Update(std::string content) const;
 };
 
 class Phone : public IObserver {
@@ -16,7 +15,7 @@ class Phone : public IObserver {
 
 public:
 	Phone(std::string n);
-	void Update(std::string content) const;
+	virtual void Update(std::string content) const;
 };
 
 #endif
