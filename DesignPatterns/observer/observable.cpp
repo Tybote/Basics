@@ -4,18 +4,8 @@ void IObservable::Attach(IObserver* obs){
 	m_list.push_back(obs);
 }
 
-void IObservable::Dettach(IObserver* obs){
-	int i = -1;
-	for(std::vector<IObserver*>::const_iterator iter = m_list.begin(); iter != m_list.end(); iter++)
-    {
-    	i++;
-        if((*iter) == obs)
-        	break;
-
-    }
-    //std::cout << "erase" << std::endl;
-    m_list.erase(m_list.begin() + i);
-	//m_list.erase(std::remove(m_list.begin(), m_list.end(), obs), m_list.end()); 
+void IObservable::Dettach(IObserver* obs){	
+	m_list.erase(std::remove(m_list.begin(), m_list.end(), obs), m_list.end()); 
 }
 
 IObservable::~IObservable(){
