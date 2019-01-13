@@ -1,5 +1,5 @@
-#ifndef OBSERVER_HPP
-#define OBSERVER_HPP
+#ifndef STRATEGY_HPP
+#define STRATEGY_HPP
 
 #include <iostream>
 
